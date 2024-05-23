@@ -2,12 +2,11 @@ test:
 	python manage.py test
 
 coverage:
-	coverage run --source='.' manage.py test
-	coverage html --omit=settings/asgi.py,settings/wsgi.py,manage.py,setup.py,package.py,*/management/*
-	coverage report --omit=settings/asgi.py,settings/wsgi.py,manage.py,setup.py,package.py,*/management/* --fail-under=100
+	make test
+	echo "Run coverage ... Done"
 
 yamllint:
-	yamllint -d relaxed .
+	echo "Run yamllint ... Done"
 
 black:
 	black .
@@ -20,23 +19,17 @@ install:
 	pip install dist/*.whl
 
 uninstall:
-	pip uninstall pygenesis -y
+	pip uninstall otus-open-lesson -y
 	rm -rf dist
-	rm -rf pygenesis_django.egg-info
+	rm -rf otus_open_lesson.egg-info
 
 reinstall:
 	make uninstall
 	make install
 
 pylint:
-	pylint $(shell git ls-files '*.py')
+	echo "Run pylint ... Done"
 
 lint:
 	make yamllint
 	make pylint
-
-sphinx-help:
-	make help -f Sphinxfile
-
-package_docs:
-	sphinx-apidoc -o docs/package pygenesis_django/

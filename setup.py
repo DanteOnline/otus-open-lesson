@@ -34,15 +34,14 @@ def get_value_from_package_info(line, value, old_value):
     return None
 
 
-PACKAGE_NAME = "pygenesis_django"
+PACKAGE_NAME = "otus_open_lesson"
 
 PROJECT_URLS = {
-    'Documentation': 'https://pygenesis-django.libresource.info',
-    'Source': 'https://github.com/libresource/pygenesis-django',
-    'Tracker': 'https://github.com/libresource/pygenesis-django/issues',
-    'Release notes': 'https://github.com/libresource/pygenesis-django/releases',
-    'Changelog': 'https://github.com/libresource/pygenesis-django/releases',
-    'Download': 'https://pypi.org/project/pygenesis-django/',
+    'Source': 'https://github.com/danteonline/otus-open-lesson',
+    'Tracker': 'https://github.com/danteonline/otus-open-lesson/issues',
+    'Release notes': 'https://github.com/danteonline/otus-open-lesson/releases',
+    'Changelog': 'https://github.com/danteonline/otus-open-lesson/releases',
+    'Download': 'https://pypi.org/project/otus-open-lesson',
 }
 
 with open_local([PACKAGE_NAME, "package.py"]) as fp:
@@ -74,13 +73,13 @@ setup(
 
     include_package_data=True,
     license="MIT",
-    description="Python Django package repository template",
+    description="Django test package",
     long_description=read("README.md"),
     long_description_content_type="text/markdown",
-    url="https://github.com/libresource/pygenesis-django",
-    author="quillcraftsman",
-    author_email="quill@craftsman.lol",
-    keywords=["python", "django", "package", "template-repository"],
+    url="https://github.com/danteonline/otus-open-lesson",
+    author="DanteOnline",
+    author_email="iamdanteonline@gmail.com",
+    keywords=["python", "django", "package", "test"],
     # install_requires=[
     #     'Django==5.0.6',
     # ],
