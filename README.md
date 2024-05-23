@@ -11,7 +11,6 @@ DRF Testing package
 - [Development Status](#development-status)
 - [Install](#install)
 - [Quickstart](#quickstart)
-- [Contributing](#contributing)
 
 ## Mission
 
